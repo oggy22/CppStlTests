@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="heap.cpp" />
+    <ClCompile Include="list.cpp" />
+    <ClCompile Include="map.cpp" />
+    <ClCompile Include="set.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="stack.cpp" />
+    <ClCompile Include="bubbleSort.cpp">
+      <Filter>Sorts</Filter>
+    </ClCompile>
+    <ClCompile Include="machine_efficiency.cpp" />
+    <ClCompile Include="SharedPtr.cpp" />
+    <ClCompile Include="test_sorts.cpp" />
+    <ClCompile Include="word_count.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="sorts.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Sorts">
+      <UniqueIdentifier>{ce13f173-59a0-46cf-ac30-bab718f8a8d6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
