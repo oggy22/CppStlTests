@@ -14,6 +14,7 @@
     <ClCompile Include="SharedPtr.cpp" />
     <ClCompile Include="test_sorts.cpp" />
     <ClCompile Include="word_count.cpp" />
+    <ClCompile Include="priority_queue.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

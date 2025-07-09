@@ -106,6 +106,7 @@
     <ClCompile Include="list.cpp" />
     <ClCompile Include="machine_efficiency.cpp" />
     <ClCompile Include="map.cpp" />
+    <ClCompile Include="priority_queue.cpp" />
     <ClCompile Include="set.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
