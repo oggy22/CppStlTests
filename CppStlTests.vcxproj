@@ -102,6 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="bubbleSort.cpp" />
+    <ClCompile Include="consistent_hashing.cpp" />
     <ClCompile Include="heap.cpp" />
     <ClCompile Include="list.cpp" />
     <ClCompile Include="machine_efficiency.cpp" />
