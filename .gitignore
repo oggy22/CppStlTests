@@ -2,3 +2,6 @@
 /.vs/
 /CppStlTests/x64
 /packages/
+**/net8.0/
+**/bin/
+**/obj/
