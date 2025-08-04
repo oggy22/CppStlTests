@@ -24,6 +24,12 @@ namespace CsPractice
 
         private static readonly HttpClient client = new HttpClient();
 
+        [OneTimeTearDown]
+        static public void TearDownAttribute()
+        {
+            client.Dispose();
+        }
+
         public async Task GetExampleAsync(string url)
         {
             Console.WriteLine("From GetExampleAsync");
