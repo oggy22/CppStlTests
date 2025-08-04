@@ -16,6 +16,7 @@
     <ClCompile Include="word_count.cpp" />
     <ClCompile Include="priority_queue.cpp" />
     <ClCompile Include="consistent_hashing.cpp" />
+    <ClCompile Include="perfect_numbers.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

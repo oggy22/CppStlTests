@@ -88,6 +88,8 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <EnableModules>true</EnableModules>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -107,6 +109,7 @@
     <ClCompile Include="list.cpp" />
     <ClCompile Include="machine_efficiency.cpp" />
     <ClCompile Include="map.cpp" />
+    <ClCompile Include="perfect_numbers.cpp" />
     <ClCompile Include="priority_queue.cpp" />
     <ClCompile Include="set.cpp" />
     <ClCompile Include="pch.cpp">
