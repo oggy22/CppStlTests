@@ -17,6 +17,15 @@
     <ClCompile Include="priority_queue.cpp" />
     <ClCompile Include="consistent_hashing.cpp" />
     <ClCompile Include="perfect_numbers.cpp" />
+    <ClCompile Include="heapSort.cpp">
+      <Filter>Sorts</Filter>
+    </ClCompile>
+    <ClCompile Include="quickSort.cpp">
+      <Filter>Sorts</Filter>
+    </ClCompile>
+    <ClCompile Include="mergeSort.cpp">
+      <Filter>Sorts</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

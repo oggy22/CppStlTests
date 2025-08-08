@@ -11,5 +11,7 @@
 #include <set>
 #include <vector>
 #include <stack>
+#include <functional>
+#include <random>
 
 #include "sorts.h"
