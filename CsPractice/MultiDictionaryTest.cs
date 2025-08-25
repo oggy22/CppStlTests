@@ -37,5 +37,45 @@ namespace CsPractice
             dict.IntersectWith(dict);
             Assert.That(dict.Count(), Is.EqualTo(4));
         }
+
+        [Test]
+        public void UnionWith()
+        {
+            MultiDictionary<string, string> dict = new();
+            dict.Add("animal", "horse");
+            dict.Add("animal", "cat");
+            dict.Add("animal", "dog");
+            dict.Add("plant", "palm");
+            Assert.That(dict.Count(), Is.EqualTo(4));
+
+            MultiDictionary<string, string> other = new();
+
+            dict.UnionWith(other);
+            Assert.That(dict.Count(), Is.EqualTo(4));
+
+            other.Add("animal", "rabbit");
+            other.Add("plant", "fern");
+
+            dict.UnionWith(other);
+            Assert.That(dict.Count(), Is.EqualTo(6));
+        }
+
+        [Test]
+        public void ExceptWith()
+        {
+            MultiDictionary<string, string> dict = new();
+            dict.Add("animal", "horse");
+            dict.Add("animal", "cat");
+            dict.Add("animal", "dog");
+            dict.Add("plant", "palm");
+            Assert.That(dict.Count(), Is.EqualTo(4));
+
+            MultiDictionary<string, string> other = new();
+            other.Add("animal", "cat");
+            other.Add("plant", "hibiscus");
+
+            dict.ExceptWith(other);
+            Assert.That(dict.Count(), Is.EqualTo(3));
+        }
     }
 }
