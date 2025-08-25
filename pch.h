@@ -13,5 +13,6 @@
 #include <stack>
 #include <functional>
 #include <random>
+#include <unordered_set>
 
 #include "sorts.h"

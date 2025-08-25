@@ -108,6 +108,7 @@
     <ClCompile Include="heap.cpp" />
     <ClCompile Include="heapSort.cpp" />
     <ClCompile Include="list.cpp" />
+    <ClCompile Include="logs.cpp" />
     <ClCompile Include="machine_efficiency.cpp" />
     <ClCompile Include="map.cpp" />
     <ClCompile Include="mergeSort.cpp" />
