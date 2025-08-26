@@ -1,3 +1,5 @@
+using System.Threading.Tasks;
+
 namespace CsPractice
 {
     public class Tests
@@ -53,6 +55,47 @@ namespace CsPractice
             Console.WriteLine("Before Task.WhenAll");
             //await Task.WhenAll(task1, task2);
             Console.WriteLine("All tasks completed");
+        }
+
+        [Test]
+        public async Task WaitTasksOneByOne()
+        {
+            // Wait 3 tasks with different delays one by one
+            List<Task> tasks = new List<Task>();
+            tasks.Add(Task<int>.Delay(300).ContinueWith(t => 1));
+            tasks.Add(Task<int>.Delay(100).ContinueWith(t => 2));
+            tasks.Add(Task<int>.Delay(200).ContinueWith(t => 3));
+
+            List<int> results = new List<int>();
+            while (tasks.Count > 0)
+            {
+                Task<int> finished = (Task<int>)await Task<int>.WhenAny(tasks); // Block until one task finishes
+                tasks.Remove(finished);
+                Console.WriteLine($"Task result: {await finished} at {DateTime.Now}");
+                results.Add(await finished);
+            }
+            Assert.That(results, Is.EqualTo(new List<int> { 2, 3, 1 }));
+        }
+
+        private async IAsyncEnumerable<int> GetPerfectNumbersAsync()
+        {
+            for (int i = 1; i < 10000; i++)
+            {
+                await Task.Yield(); // Yield control to allow other work to run
+
+                // Check if perfect numbers
+                if (i == 6 || i == 28 || i == 496 || i == 8128)
+                    yield return i;
+            }
+        }
+
+        [Test]
+        public async Task TestAsyncEnumerable()
+        {
+            await foreach (int number in GetPerfectNumbersAsync())
+            {
+                Console.WriteLine($"Perfect number: {number} at {DateTime.Now}");
+            }
         }
     }
 }
