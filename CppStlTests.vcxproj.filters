@@ -27,6 +27,7 @@
       <Filter>Sorts</Filter>
     </ClCompile>
     <ClCompile Include="logs.cpp" />
+    <ClCompile Include="lock_and_mutex.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
